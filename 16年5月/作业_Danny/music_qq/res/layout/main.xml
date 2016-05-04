@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="65dp"
+        android:background="@drawable/actionbar_bg" >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="38sp"
+            android:layout_height="38sp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16sp"
+            android:contentDescription="@+id/actionbar_left_icon"
+            android:src="@drawable/back_left" />
+
+        <TextView
+            android:id="@+id/center_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textColor="#FFF"
+            android:textSize="21sp"
+            android:text="Justin Bieber-Baby" />
+
+        <ImageView
+            android:id="@+id/right_icon"
+            android:layout_width="38sp"
+            android:layout_height="38sp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16sp"
+            android:contentDescription="@+id/actionbar_right_icon"
+            android:src="@drawable/actionbar_right" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@drawable/bg"
+        android:gravity="bottom" >
+
+        <RelativeLayout
+            android:id="@+id/play_element"
+            android:layout_width="fill_parent"
+            android:layout_height="125sp"
+            android:layout_weight="0"
+            android:background="@drawable/banner_bg"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/music_author"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5sp"
+                android:gravity="center_horizontal"
+                android:text="QQ Music"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/horizontal_music"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/music_author"
+                android:layout_marginTop="6sp"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/reduce_vol"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:contentDescription="@+id/reduce_vol"
+                    android:src="@drawable/reduce_vol" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <SeekBar
+                        android:id="@+id/music_progress"
+                        style="@android:attr/progressBarStyleHorizontal"
+                        android:layout_width="220sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8sp"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:max="100"
+                        android:paddingLeft="5sp"
+                        android:progressDrawable="@drawable/play_seekbar_style"
+                        android:thumb="@drawable/play_seekbar_thumb"
+                        android:thumbOffset="5dip" />
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/time_progress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="20sp"
+                            android:text="时长："
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/music_duration"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="20sp"
+                            android:layout_marginRight="15sp"
+                            android:text="04:25"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/increase_vol"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_marginLeft="8sp"
+                    android:contentDescription="@+id/increase_vol"
+                    android:src="@drawable/increase_vol" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/horizontal_music"
+                android:layout_marginTop="6sp"
+                android:gravity="center_horizontal" >
+
+                <ImageView
+                    android:id="@+id/pre_music"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@+id/pre_music"
+                    android:src="@drawable/previous" />
+
+                <ImageView
+                    android:id="@+id/play_pause_music"
+                    android:layout_width="42sp"
+                    android:layout_height="425sp"
+                    android:layout_marginLeft="30sp"
+                    android:layout_toRightOf="@+id/pre_music"
+                    android:contentDescription="pause"
+                    android:src="@drawable/play"
+                    android:onClick="play" />
+
+                <ImageView
+                    android:id="@+id/next_music"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30sp"
+                    android:layout_toRightOf="@+id/play_pause_music"
+                    android:contentDescription="@+id/next_music"
+                    android:src="@drawable/next" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
